@@ -1,17 +1,9 @@
 ## Getting Started
 
-### Install
-
-Create the project.
-
-```bash
-pnpm dlx degit joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate my-app
-```
-
 Access the project directory.
 
 ```bash
-cd my-app
+cd LinkingPark_dev
 ```
 
 Install dependencies.
