@@ -4,6 +4,7 @@ import { Auth } from './Auth'
 import { Home } from 'pages/Home'
 import { Publish } from 'pages/Publish'
 import { Contact } from 'pages/Contact'
+import { Profile } from 'pages/Profile'
 
 const baseApp = () => {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={baseApp()} />
         <Route path="/auth" element={<Auth />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/home" element={<Home />} />
         <Route path='/publish' element={<Publish />}></Route>
         <Route path='/contact' element={<Contact />}></Route>

@@ -4,17 +4,17 @@ import Avatar from "components/Avatar";
 export const IdeaBox = () => {
   return(
     <div className="card bg-base-100 w-full shadow-xl">
-    <div className="card-body">
+    <div className="card-body p-5">
     <div className="w-full flex gap-3 items-center justify-start">
       <Avatar size="small"/>
-      <h2 className="card-title">Card title!</h2>
+      <h2 className="card-title">植物爱好者</h2>
     </div>
     <p>If a dog chews shoes whose shoes does he choose?</p>
     <div className="card-actions justify-start">
-    <div className="badge badge-outline">default</div>
-    <div className="badge badge-outline">default</div>
-    <div className="badge badge-outline">default</div>
-    <div className="badge badge-outline">default</div>
+    <div className="badge badge-outline">标签</div>
+    <div className="badge badge-outline">标签</div>
+    <div className="badge badge-outline">标签</div>
+    <div className="badge badge-outline">标签</div>
     </div>
     <div className="card-actions justify-between">
       <h3 className="">Agent</h3>
