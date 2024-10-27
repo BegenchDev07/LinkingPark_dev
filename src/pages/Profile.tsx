@@ -1,20 +1,30 @@
-import { MenuSelector } from "components/MenuSelector"
-import { Navbar } from "components/Navbar"
-import { log } from "console"
-import { useRef, useEffect } from "react"
 
+import { ProfileCard } from "components/Card/ProfileCard";
+import { ProfileTabs } from "components/Tabs/ProfileTabs";
+const handleEditProfile = () => {
+    alert("Edit profile clicked!");
+  };
 export const Profile = () => {
-  const currentTab = useRef<any>(null)
+  return (
+    <div className=" size-screen p-5 bg-gray-300">
+      {/* <div className="size-full flex flex-col overflow-x-hidden"> */}
 
-  useEffect(()=>{
-    console.log(currentTab?.current?.getClickedButton());
-  },[currentTab])
-  return(
-    <div className="w-full h-screen flex flex-col px-1 gap-3 items-center justify-start">
-      <div className="w-full h-auto px-5">
-        <Navbar/>
-        <MenuSelector ref={currentTab}/>
-      </div>
+      {/* <div className=""> */}
+        <ProfileCard
+          imageSrc="https://randomuser.me/api/portraits/women/44.jpg" // Replace with actual image URL
+          userName="Jane Doe"
+          phone="123-456-7890"
+          onEditProfile={handleEditProfile}
+          />
+    {/* </div> */}
+    <div className="size-full flex py-5 gap-3">
+
+        <ProfileTabs></ProfileTabs>
     </div>
+    {/* </div> */}
+    {/* </div> */}
+    </div>
+    
+
   )
 }

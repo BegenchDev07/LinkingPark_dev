@@ -1,5 +1,6 @@
 import { Navbar } from "components/Navbar"
 import { IdeaBox } from "components/IdeaBox"
+import { FloatingButton } from "components/Buttons/FloatingButton"
 
 
 export const Home = () => {
@@ -14,6 +15,9 @@ export const Home = () => {
         </div>
         <div className="w-1/2 flex flex-col">
           <IdeaBox/>
+        </div>
+        <div className="absolute bottom-10 right-10">
+          <FloatingButton label="发布"></FloatingButton>
         </div>
       </div>
     </div>
