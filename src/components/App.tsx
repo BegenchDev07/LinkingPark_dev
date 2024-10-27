@@ -5,7 +5,8 @@ import { Home } from 'pages/Home'
 import { Publish } from 'pages/Publish'
 import { Contact } from 'pages/Contact'
 import { Profile } from 'pages/Profile'
-
+import { Register } from 'pages/Register'
+import { Login } from 'pages/Login'
 const baseApp = () => {
   return (
     <div className="container mx-auto h-screen w-full text-center">
@@ -29,6 +30,8 @@ function App() {
         <Route path="/" element={baseApp()} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path='/publish' element={<Publish />}></Route>
         <Route path='/contact' element={<Contact />}></Route>

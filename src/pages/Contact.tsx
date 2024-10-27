@@ -1,4 +1,5 @@
 import { Navbar } from "components/Navbar"
+
 export const Contact = () => {
   return(
     <div className="w-full h-screen flex flex-col items-center justify-start gap-14 bg-gray-500 px-3">
