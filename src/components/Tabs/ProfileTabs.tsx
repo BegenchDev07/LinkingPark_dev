@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
-export const ProfileTabs: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(1);
+interface TabFormat {
+  onChange: (data:number) => void;
+  activeTab: number;
+
+}
+
+export const ProfileTabs: React.FC<TabFormat> = ({onChange,activeTab}) => {
 
   const handleTabClick = (tabIndex: number) => {
-    setActiveTab(tabIndex);
+    onChange(tabIndex);
   };
 
   return (
@@ -42,17 +47,7 @@ export const ProfileTabs: React.FC = () => {
       </div>
 
       {/* Tab Content */}
-      <div className="p-4 border rounded-b-lg">
-        <div className={`transition-opacity duration-500 ${activeTab === 1 ? 'opacity-100' : 'opacity-0 hidden'}`}>
-          Content for Tab 1
-        </div>
-        <div className={`transition-opacity duration-500 ${activeTab === 2 ? 'opacity-100' : 'opacity-0 hidden'}`}>
-          Content for Tab 2
-        </div>
-        <div className={`transition-opacity duration-500 ${activeTab === 3 ? 'opacity-100' : 'opacity-0 hidden'}`}>
-          Content for Tab 3
-        </div>
-      </div>
+
     </div>
   );
 };

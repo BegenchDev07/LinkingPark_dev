@@ -23,14 +23,15 @@ export const Login = () => {
 
   return (
     <div className="size-full flex flex-col">
-      <div className="w-full h-screen bg-black ">
+      <div className="w-full h-screen relative bg-black ">
 
       </div>
-      <div className="sticky bottom-0 h-auto w-full flex flex-col items-center justify-center bg-white">
+      <div className="absolute bottom-0 h-auto w-full flex flex-col items-center justify-center bg-white rounded-t-xl">
+        <h1 className="text-7xl font-extrabold py-3">登陆</h1>
         <form
           action=""
           onSubmit={onSubmit}
-          className="flex w-full h-1/2 p-12 flex-col items-center justify-center gap-3"
+          className="flex w-full h-1/2 p-6 flex-col items-center justify-center gap-3"
         >
 
           <input
@@ -58,6 +59,7 @@ export const Login = () => {
               value={'Submit'}
             />
           </div>
+          <a className="p-3 text-xl text-blue-400 underline" href="/register">注册</a>
         </form>
       </div>
     </div>

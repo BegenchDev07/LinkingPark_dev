@@ -15,7 +15,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
   onEditProfile,
 }) => {
   return (
-    <div className="max-w-l mx-auto bg-white  rounded-xl p-4 text-center">
+    <div className="max-w-l mx-auto bg-white  rounded-xl p-4 text-center shadow-xl drop-shadow-xl border">
       {/* Profile Image */}
       <img
         src={imageSrc}
@@ -29,7 +29,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
 
       {/* Edit Profile Button */}
       <ActionButton label="修改个人资料"></ActionButton>
-      
+
     </div>
   );
 };
