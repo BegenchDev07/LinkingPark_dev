@@ -7,6 +7,8 @@ import { Contact } from 'pages/Contact'
 import { Profile } from 'pages/Profile'
 import { Register } from 'pages/Register'
 import { Login } from 'pages/Login'
+import ProtectedLayout from './ProtectedLayout'
+
 const baseApp = () => {
   return (
     <div className="container mx-auto h-screen w-full text-center">
@@ -28,13 +30,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={baseApp()} />
-        <Route path="/auth" element={<Auth />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route element={<ProtectedLayout/>}>
+          <Route path="/profile/*" element={<Profile />} />
+          <Route path='/publish' element={<Publish />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+        </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path='/publish' element={<Publish />}></Route>
-        <Route path='/contact' element={<Contact />}></Route>
       </Routes>
     </BrowserRouter>
   )

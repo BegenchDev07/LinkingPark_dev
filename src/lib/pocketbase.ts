@@ -3,7 +3,7 @@ import { Collections, UsersRecord } from './pocketbase-types';
 import { FormValues } from 'pages/Register';
 import { LoginValues } from 'pages/Login';
 
-const pb = new Pocketbase('https://admin.400box.cn');
+export const pb = new Pocketbase('https://admin.400box.cn');
 
 
 export const registerUser = async (data:FormValues) : Promise<Boolean> => {

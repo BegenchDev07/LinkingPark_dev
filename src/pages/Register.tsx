@@ -22,10 +22,10 @@ export const Register = () => {
 
   return (
     <div className="size-full flex flex-col">
-      <div className="w-full h-screen bg-black ">
+      <div className="w-full h-screen bg-black relative">
 
       </div>
-      <div className="sticky bottom-0 h-auto w-full flex flex-col items-center justify-center bg-white">
+      <div className="absolute bottom-0 h-auto w-full flex flex-col items-center justify-center bg-white rounded-t-xl">
         <form
           action=""
           onSubmit={onSubmit}
