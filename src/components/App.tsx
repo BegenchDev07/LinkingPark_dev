@@ -7,6 +7,8 @@ import { Contact } from 'pages/Contact'
 import { Profile } from 'pages/Profile'
 import { Register } from 'pages/Register'
 import { Login } from 'pages/Login'
+import { ManagePage } from 'pages/ManagePage'
+import { CheckIdea } from 'pages/CheckIdea'
 import ProtectedLayout from './ProtectedLayout'
 
 const baseApp = () => {
@@ -30,14 +32,19 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={baseApp()} />
-        <Route element={<ProtectedLayout/>}>
+        {/* <Route element={<ProtectedLayout/>}> */}
           <Route path="/profile/*" element={<Profile />} />
           <Route path='/publish' element={<Publish />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
-        </Route>
+          <Route path="/manage">
+            <Route index element={<ManagePage />}/>
+            <Route path="idea" element={<CheckIdea />} />
+          </Route>
+        {/* </Route> */}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+
       </Routes>
     </BrowserRouter>
   )

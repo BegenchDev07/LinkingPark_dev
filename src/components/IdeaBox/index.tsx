@@ -1,7 +1,13 @@
 import Avatar from "components/Avatar";
-// import { PillTags } from "components/PillTags";
+import { IdeaButtons } from "components/IdeaButtons";
 
-export const IdeaBox = () => {
+interface EditStatus{
+  edit: Boolean;
+  status: number;
+}
+
+export const IdeaBox :React.FC<EditStatus> = ({edit,status}) => {
+
   return(
     <div className="card bg-base-100 w-full shadow-xl">
     <div className="card-body p-5">
@@ -16,6 +22,10 @@ export const IdeaBox = () => {
     <div className="badge badge-outline">标签</div>
     <div className="badge badge-outline">标签</div>
     </div>
+
+    {/* Here goes buttons */}
+    <IdeaButtons status={status}/>
+
     <div className="card-actions justify-between">
       <h3 className="">Agent</h3>
       <div className="flex gap-3 items-center justify-center">

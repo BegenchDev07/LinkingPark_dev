@@ -3,6 +3,7 @@ import { ProfileCard } from "components/Card/ProfileCard";
 import { ProfileTabs } from "components/Tabs/ProfileTabs";
 import { useState } from "react";
 
+
 export const Profile = () => {
   const [activeTab, setActiveTab] = useState(1);
   const handleChange = (data:number) => {

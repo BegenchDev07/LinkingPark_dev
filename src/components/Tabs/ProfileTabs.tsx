@@ -15,35 +15,35 @@ export const ProfileTabs: React.FC<TabFormat> = ({onChange,activeTab}) => {
   return (
     <div className="w-full max-w-md mx-auto px-5">
       {/* Tabs */}
-      <div role="tablist" className="tabs tabs-bordered">
-        <a
+      <div role="tablist" className="flex items-center justify-between border-b">
+        <button
           role="tab"
-          className={`tab ${activeTab === 1 ? "tab-active" : ""}`}
+          className={`border-b-transparent border-b transition ease-in-out duration-500 focus:border-b-black ${activeTab === 1 ? "tab-active" : ""}`}
           onClick={() => handleTabClick(1)}
         >
           已通过
-        </a>
-        <a
+        </button>
+        <button
           role="tab"
-          className={`tab ${activeTab === 2 ? "tab-active" : ""}`}
+          className={`border-b-transparent border-b transition ease-in-out duration-500 focus:border-b-black ${activeTab === 2 ? "tab-active" : ""}`}
           onClick={() => handleTabClick(2)}
         >
           审核中
-        </a>
-        <a
+        </button>
+        <button
           role="tab"
-          className={`tab ${activeTab === 3 ? "tab-active" : ""}`}
+          className={`border-b-transparent border-b transition ease-in-out duration-500 focus:border-b-black ${activeTab === 3 ? "tab-active" : ""}`}
           onClick={() => handleTabClick(3)}
         >
           未通过
-        </a>
-        <a
+        </button>
+        <button
           role="tab"
-          className={`tab ${activeTab === 4 ? "tab-active" : ""}`}
-          onClick={() => handleTabClick(4)}
+          className={`border-b-transparent border-b transition ease-in-out duration-500 focus:border-b-black ${activeTab === 4 ? "tab-active" : ""}`}
+          onClick={() => handleTabClick(0)}
         >
           点赞过
-        </a>
+        </button>
       </div>
 
       {/* Tab Content */}
